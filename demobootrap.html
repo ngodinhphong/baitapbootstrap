@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+
+  <!-- <button type="button" class="btn btn-success">Success</button> -->
+
+  <!-- 1 dòng sẽ là 12 cột -->
+  <!-- để dử dụng được reponsive trong bootstrap thì thẻ cha phải sử dụng class container -->
+  <!-- <div class="container"> -->
+  <!-- định nghĩa dòng -->
+  <!-- <div class="row"> -->
+  <!-- định nghĩa số cột sẻ chiếm nội dung -->
+  <!-- <div class="col-md-6 col-sm-12">
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <button type="button" class="btn btn-success">Login</button>
+            </div>
+        </div>
+    </div> -->
+
+  <div class="container-fluid">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid ms-5 ps-5">
+        <a class="navbar-brand --bs-dark fs-2 fw-semibold">Cybersoft</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    About
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-danger">Get Started</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+    <div class="position-relative ">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item ">
+            <img src="https://cmcts.com.vn/media/cache/data/users/cmc-cyber-security-cr-1200x630.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item active">
+            <img src="https://zshop.vn/blogs/wp-content/uploads/2023/06/wwdc23-1-1200x630.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item ">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFhUYGBgYGBgaGBgZGBoaGhgYGRgZGRkZGBgcIS4lHB4rIRgYJjgmKy80NTU1GiQ7QDszPy40NTEBDAwMEA8QHxISHzYlJSQ0NDQ0NDQ0NDQ0NjE0NDQ0NDQ0NDQ0NDQ0NTQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAKMBNgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAAEDBAUGB//EADcQAAEDAgUCBAQFAwQDAAAAAAEAAhEDIQQSMUFRBWETInGRMoGh8AYUscHRUuHxI0JichaCkv/EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAnEQACAgICAgEDBQEAAAAAAAAAAQIREiEDMRNBUQRhcSKRscHhgf/aAAwDAQACEQMRAD8A1n0TuFEaYXS4rAbgrKr0dlpHksmUKMp9AcqF9Ja35ZRuwp4WqmZOBmCmn8NaIw54SdRV5kYFFrETWK2KacUkZiwIW00YYp2sTloSseJXc1JrFM5idrFSZLWxmU1MGomsRBqlspIEBShkp2MUoapbKSIxQCifS4VlyiLklYOiB1D1UD6R4Wix8IatQGypSdicU0ZLmqNzVqNoNKjr4ThaKaM3BmU4KNwVyrRhV3MWi2ZPRAQgIUrmoS1URZA5qjLFYLUJamJlVzEBarTmoPDTshxKxagLVZNNMaSVoEmVC1ItVk00DmJ2VbIC1CWqwykXENaCSTAAEklKvhnss9jmzpIifRTauildWVCEJCnLUm0ydAmNMrlqStswTnaNJjskpyj8l/q+GewuaCqWIwrTsrcEJnrxIyo9mUbMg4O/HySOEdsQtI1BwmDwdlqpMycDOdhXbhRfley2mnupAmpMWKOfOEvp9EnYN3BXQhreEnNVLkYsEc2cMeEvyx4W84gaj6IfIdla5GQ+NGE6jGyTKa3Dh27FD+Ub2VeUT4zI8NPkWmcJwo3YUhNTRLgyoxqMhTeGgLOyd2Kiu4IIVhzFG5ipEsgchhTZELmqrJoiLkTau0JyxAWp6FbRHVAOyq1GDhWyEBpymnQmrM91JCaJWmKKZ9OE/IT4zKNJRuprYNK2ih8MT5ge2yS5QfCZWRN4avVGNmwUZarUrIworGipG4KYEOk6d/TlSBqsUqxBEmYMidvRROUvRpCMb2SVuhOawvLIgDeTM6wN+yxH0uy7Gj1ppBDxtaBdYmKfTLiWyJ1BA191jxcnJbUkbcvFxtJxZD0p9QENZAE7tn1k7K7jXtfIeb/7REgG4uq7azWzlcRI4g6fyqjnE8zyhwyll0NSUY49lLE4ItOoMcT+hVZgIK0/DJUT6A3K6VLVM5Zce7josYfEAD4gPQJKqWNGyZZPjizdcrR6ln4BHqCiLgRcD5LH6dj3iAbrce9sZiP2K8VTXvVHqSTRSqMVctK0qJa6bQpaVKAQN1pHlTVrZMvhmO1ykzlXa2CkEgebXWx5tsqYpraMk1ZnQ4eUXilIMSLFVoKHNVRuIRhiLw0JoWJWMqQBThgTlgVZCxIpKdpR+GnDEWhUROTEqRzUGRUmJohczsoXMVx4UWVWpEOJVNNAaatuah8MqsycSo5ijNOVo/l+UixLMPH8mf8Al+UvD4V0003hgf3SzHgUwzeDHKlpYMvMiP8A2MeylLjMG/ZS4fPMBtu4sFMpuhxijPq03MPmb6bgxwonuzmXfQLSxzHvAGX4ZmFTpYWZvEIjJVb7G4u6XRm1qQmygdTWx+V5TOwoVrlSIfC2YppHhD4BWy6mAgFUN0H0VeVvpC8KXbMn8q5L8stR2PftA+QVSu8vu6EKcn2DhFdFRzWhQvfwFpYbDs+OpIYJDQNXv2aOALSflqVDWwrSJaTMmRHlA2gzKpSV7Jwk1aM17zyoitD8ohdQAV5xM3xy9lDKmVwsCSeQvGd9T6aRfRT06LibzH6rRTghfPeJfJ6z5ZETaYGylAQkpBy0iox6M3bHfoqj6KuBPAC0iwUqKPhpvDV4whDRMlNSYZFUU05pqzF1JlG6q2DlRSFJC5iv+GEJoBUrDJGflSLVdNAcoTQ4MqrDRSLUJarpwxQvw5CakKkU4TeGrPhp8qeQYlUUkUKcsQliMgoruCAhWixCaSMkLEpkIcqu+CmNNGSDErNb2R+K4aI3QFC9ynsdUEa7+VXqPkyU7yonQqSE5Aueo6hlE56jLlSRLkRmmlSwuYxOUbk6BIkpiU9i0aDel05s7NbSR72Vep05kzmytHxEkQ1u5JOn9wq7A4kBsybCN5V38R02UMG+m4ZnVBBIEwYJDvQQYWeMk7s0Ti9Ucxj+oZ3BzGjwGQxtjMC5cba5jM6XgkWKCjjWE5c8kC50EczosBnisJyyJEubs9oIPl2dtafRIQHNe0+R0AtP+2W5C0zyNza2oWkW0qYpV6OqNYNGctEN+IHQ6C/GquClTeZDDDtMp0PcbLBw2JIABnXK46t4E8CI1/VW6FYsdA+cduO6co3tPYk60y31DCMaQGiDveUyd7810lCc0NqL9HoICIBA17ToQpAF50f1dDY0JiwI4RQrUWTZHCUKSE6tRCyIMRZAjSWijQrAyhEAnhOqqgsZRuKMpkrBERallKlKZForIjhJHZMQgdkZCbKjTFIYBYhLQjIQ5EDBICEuRlibLCLQEL9JULiVb8IlRupwmpIRTc1A6mVd8NPlEaX5TyDEzXUSgNFaD5URYeEZk4lF1JROprRNM8JvCPAT8gYGW5iDISYAubDuVpvoTYC/bdBXLcO3M4jO6RSbrDgJLjtbWFUZ2JxojFZmFkuAdVvDQbNbuSRuuR65XqVa76ni5JAc1jhLWsaWT5hpBDDpPdTYiq/MXEl7i45p1JibcWAj0cqfVWslkgZoflJLQ06S2Xb3JHItutMVWwTroysfnADgRkbs34ZiQ4DZpDm/cIKFUOPmaIyZjFpg3B2iAbRf9LmHpGzHGGuzAPDYa4wQWEQQD2kaFSN6OWeUPlh+KQDFjsICaQWFgaudhM2JLSAYOXSAeYgjn5pqD3MLQAS0ANMyTJ03sNvmNgiwuA8IuYC4gxJJ3i5EbHlXBWa9hJBGV2Vzo0InzTuOVSFYVDFToNrj+kyR9YPsUlBUpPZBaQCBlzESCNT85APzKdGgPRqVRp0JB+it0q0DzFZbMTSBtIPurorsIBm3oV81xxnF2mv6Orkh9mXBXCMVAqrWgXJEfe6naB9ldUJ8r7owlFLolCJCCEcruhXshihPCQTroUUSNCUJJJ0gBhKESShxHYBCEtUhKgrVw3uokortjVvoF7oTMfOipPrGSdeBxqlh60en7rn8mzfxui+kAkDum8QcqnNIz2OmIOyeUgk5NjI/Dd/V9E4YdzKRBzTPyTlyiKv5/cNjgQmcUDnLOZ1UOMNbYmAZGxgzE/cJuSXbopRb6NE9ghcqLMc0uLdLxPPzR457m03PEy0SBE+/a904pyZTWPZO56jdUWHQ6+wyHgsI1IlzZ3iLhaWFcKwlhDhzsPXhXi16ESF5JganQKvjcUykQ17wDuG+YgRMkDRT9RrtwrJ+Ko7ytFpJifKD2XJVcUK9NlV8B7nZXeaw+HLmnSS5197q4qKdMSTatFnqPVc+nlY025M/7nnntsufxfVmiSKlmk5W5ZMtnNBmJnLYx8Pdan4k6I+k1tWk+XOE5btzyJ05FrnmPTG6dVbUJbUpMGQht4+KNBsTa9tl0xr0Zsp4Tq4NXzQ3PAmTlhvweljBK1qOR7DTe5jxGaJFmH4CeI0+bUGL6FTqEObDDe7QIM7kLJqdKfTeQ0OfLS2QwmAR5CJtIdl0NlW0I0ML059J4LHZmNJkOmQNxa0g32lbFbT4cwOot+/us3ANLAwPGR7xGWfiygAOPyMGZNgdlp5wBOgiSTaABMmdLD6JolgM82rIi1wNO33uq9arkeWhjnNyEkAEze4HfzG3qoP/ACHD5sufYnNldl9JiSfRVeqfiZjGxRIe42kg5Wj5xJ7f4I2qEaJ6jSptb4jvKRLCLlw2MRxaeUlwNbFPeRLicogbQJmLdykpyY6PaKDA0yLnQE7TaR3VgGRG3891VbspmELyMUlR7EleyUFwPl03vYeghW2VDyqocjDkKKTsxlGy8K5F5kb/AMq3TxE7LMa4o2PVqcovTOeXGma4cnVGlWjVXGuldXHzZafZzyg0EnlCT3QOrACSf3W2SXbJpkiYlQ/mmxIP0QvrWJ+QWcuRVp2NRfwHUeNNSfuSqNaoCZGkW9OVQqYsCZJFu2szHYXUfjOeNYJPlN9Ii43tHuvOl9SpSqtnXDgcdsOvUhwPpcbgkD1j+QlUqjLJ723MHb6IDSA1Mk3BAuOwKpYqkWgnNLXaA2IOo1+Y+amTlFN0dMYp0i5SxDgJc4BozXduJsVpUa9OAeTGh1i9vVcjVruJAvECAY0gXk6evZaFI+HTLi4OPxAgz/TfTT9ZKiPJTTq17sOXgT/w6tlUESLpEjhcx0/qP+plG7QYJ5AJb6iYCt4zrLQ4Na6YzZiMpAIIEGb/ACAuuzzQxtnK+CSlSNoAC4CfMsF/WpADRmN5JMD5CL6i9ln1uvy80wTy5/wngBrRcC2/HdSueHoa4Jvs1es4xximzKLw9zwcgEGziPhnk2VNuGD4DXhpHx5A2XmZkXJAt9VVoV3Sw5GgQR58xc6waA0E3k3sNFfw5awucHsa0WcC2BME/GHGSN5/uhyjLt9l4uCpEjOmMZBFxrLgTJFwYENF76IMdjXPY9kODrZSBmDgLwO5i29xZW6DG1HEZ5AF2tdv3I0Pz9ldp0GUQ5waASLm7nO4EkyfRawVK/RlOS6e2cd0j8N1C4+J5GOc4gH44OzW7DS59lrYjqjWgUKEZWeWf+sTlnU31OpnZaHXMeKdMuJaCAYzaNnVxgaAXjdeRdY66XjJSlrIu7R7zed7MvYa86wFOUpvGPXt/A4JVlL/AIjpuqdXZUccjw/zTEn4Axx1PGWRtdUem4plUZBc2Ia7+mfMcswSI9IIO9uUpV4hti6QQ7edQ3g7arYw7KjTnZAGVtTyubALgCDE3EmMu2YjdXLhqNJ/dfkceTe0evU3ivTNoJY5pBEgF1jfQ6fyuDxFFpDmvAE+V3Mi2o3EfRSYD8UsZD21aYzy59NzwAHaEi9jPuAl1z8RYJ7Q9r/ObPa1pvacwtFiIkn6QVX0/K3qSafsz5OPHadowsX0qsx+eg97gZJ83mESYIPxDYey18NiXljS9hPl8xgTaPiZre5t7DRc2fxO9rv9NksH9fxO/wDkw36pup/iZ9QRTb4YtLs0uNrgGLCd9dNF2JpGGy1+LDSZpPiOaQ1snK1pIzOja1ht2suUc5zpJcTJuSSZPflO+SS4kuJJkkySeSTco8p7Ra5UN2ABAHr9+6dtM/54RAgaXPJ9NkzidygYz4m5n3/ZJIU45ToA9la5E0qs16Nr157R66LTH91I1yqeJ6KRr1FUDVloVDH+E3igmzoP6xsQVXDxqhAGbNo79RzHOyzaZOCNJtX77qeniSBY/JZraiF7iCCD2IKrJx2ZviT0aRr9/uyTqyoionzJ5MXiRaNRRYivDbGDtPKhzqo6XGxGW4BAu2NYPcqZSaVL2VHjV7FGcSAZvJOk30HKhNQMGpBvB3NoiNhfVWmsyiAbRxedJlZT8MPEDcxMklx47E86/RYS4mkmls6ItPT6LLfELQ5p9B3FiR7KpXpuDssamQJsJ3n1/RbLGhoAFgPvdRVaWYtJPwmY/wCQ0P627rTwaSsSnTKOI6eNc4acu9hPJPGio18XmJIJsACQTBa2wn0/SPnY6thXvc2CcptpOWJ13j74WhhqLWNDQ0CN41MXKp8OT1oWdd7MjpVcB5aTDnBrWWAJBsbnQWH8rdb0xgu+oM9pgAxbQDeIjmwURDZ0EjSwt6caIS5XH6ZK7dmU5tvWgX02tzZRmI+GTAJOpnQdzB0gLPOCDfOB57uJaCWkzOUtJvOnrfVW6dZpc4B4JEDIIlvr3KcHM7K2XOiYGw5cdGj1VLhhFV/IZMw8LjK1RznD4tiBmcLRlAJ8oMni4MBdFg+g/wCmDXeQ0AEUmlpkN2nTc3F4IuoW9HZPi1qjGNGbdrc0xPmdrprcX1KzesfjENgYdrA1pgOeNQLhzWz6997bqH4/BnN+k/ydph8lJrQKYYDmLWi8EDNLty6AeYXLfiH8WNpuLWtzuDgQcwDAAGkG2pzfpF1yHUfxTiawIdUgaQwBtiIIzC5FtJvusTF4ovOgFgIGlgBP0W/jlJ76MVUd+zQ631+piDDoa2R5RN40zEkkxc+pJMlY7nJi5Ct4xUVSM3JvsR9k9asXmXOLj3M+0+p90DkwWiRDYR+qEImsPp6/wiFpjXk6/wBkybBIO9u3KPJuShb625/gJE8fMoALJGn1uhdyU2p+/wBkzie8oAdx2TZ4sPv5JZSo3DlAiem8ev1SUTT8kkBZ6y19plGKyoNeOIvGnyUgrQQCb/f8rjaPWTL1OrIn79kQr991nvrXgH7H1R+IfUfe6zosvsrXhRvIa8OEy6x4JtHodv8ACqsqesD3++6MVLdr/ZClxsaZea8zPKI1JsRP3wqgf390QehxFZb8RP4iqB1kn1IuhRAth6bPCq+J3ukKndJJAWzUQNIGgj0Vc1O6YvVpEsteImFRVTUKbxd1aiS2WnPQVKoY2XGB+/AVarjGMjM4NnSSBPoJusXHdQDiXk+VsADiQRf17KZzxWuwirf2L9HrVN73MJyEZiCSIIAknNsYm3ZS1+p0GgB1Rpm8DzWADgSGz291wVaoMxiSJsTYqAvWkbrZlKSs3q3XAxzjRYG5tS+S6NgADDR2uocf+JKr2lgORhiWtJl0CPM7f6LEe5AXJ+NPbJc2T1sQ50ZnOdAgZiTA4E6BQOcgc5C5ytRMpSCL0BchzISVokZuQUoXOTQibCqiGxmiUVh6ppQkpk2FmOyRbHqhD/sJOegCVrNyfvlO6/HsoBUTF6AsnkBMagHdQElKUBZN4qic4TKGUkxWOXlJKEkAejvxTeRKiY/N8Ovfv+9lzmHx7ZEuIn6H14Uz8Y5pIaWuAAcJN4F4HOk2XM0empo321CNbXJ9JvFvZSvrtAnTmTf5/e65xnWtZb5dhzzB0trpshpOfUnK5thoSBE/Xt7qHEpTR0TMewGA4fWTe2phO7FAmx0vaAdDcSuTrPcx5aRBBGYA67x6JZnPd5TmmNdbjSSk4samda3G3kuN95BjY2hTO6kxtnvaCBJkgTxF1xmMqhrzktEbk3j791XdVJMkyUKDexPkrR21DqrKhIbB7TBj0Iup/FPJ102v8/uFwLahFwYV1nWKoAGeY5AJ9zqk4MFyo7M1S25NuY9ronYoAS4iI1NhHzsuDrYp7z53Fxnfk8BA950JNtL6IwF5Ttq3V6LL52n/AKmTpwFTqfiZn+1jif8AlDR7iT9FyWZLMqUCHyGziOvVnGQ7IOGgfqRKrDrFYGRUdMRsR7G3zWYaiAvVKJLmauFxrfEa+o51iXF2pm5H1hQ4/qDqhuYbMge9zybrPL0JehcUcshPldUTF6AvUZchLloomTkSF6YuUeZMFSiS5BFyaUxKUppENjlNKYlMnRNjpShlIFMVjuKYlMUiUxCSCSRQAiUgUySBCJSSSQAikSkAjDI19v5QMANJ0TqS50CSQ6DCOjUIIM6EH58pJKGdCL/ULWFhlcY2m940VEVCAL6gz3uUklCLfbLvTnl72tccw0veBBsDqPkruMtmAAEuboBwkks+Ts6OLoxnan1SCSS1OZjpwmSSAUpBJJAhigKSSpCYxTJJJiYxTJJJkjFCkkglhDRJJJUIZC5JJBLGRFJJADJgnSTECnSSQIZJJJACCSSSAEkkkgCQaBE1JJIpBlJJJAz/2Q==" class="d-block w-100" alt="...">
+          </div>
+          
+          
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="position-absolute top-50 start-50 translate-middle-x text-center w-75">
+      <p class="text-light text-center fs-4"> Lorem lpsum is simply dummy text</p>
+      <p class="text-light fw-normal text-start">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. the point of using Lorem Ipsum is that it has a more-of-less normal distribution of letter, as opposed to using 'content here, content here', making it look like readable Enghlish</p>
+      <button type="button" class="btn btn-danger my-auto">Read more</button>
+    </div>
+  </div>
+
+  <!-- file css sẽ import ở đây -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
